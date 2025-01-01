@@ -7,7 +7,7 @@ If you encounter an error like "API key not valid. Please pass a valid API key."
 1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey).
 2. Navigate to the API key section and create a new API key.
 
-Your API key will look something like this: AIzaSyAtpnKGX13bTgmx0l_gQeatYvdWvY_wOTQ
+Your API key will look something like this: (Your API Key)
 
 **Note:** The API is free but has a limited number of usage requests.
 
