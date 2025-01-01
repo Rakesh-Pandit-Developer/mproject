@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Increment & Decrement Button |  </title>
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+  <div class="wrapper">
+    <span class="minus">-</span>
+    <span class="num">01</span>
+    <span class="plus">+</span>
+  </div>
+
+  <script>
+
+   const plus = document.querySelector(".plus"),
+    minus = document.querySelector(".minus"),
+    num = document.querySelector(".num");
+
+    let a = 1;
+
+    plus.addEventListener("click", ()=>{
+      a++;
+      a = (a < 10) ? "0" + a : a;
+      num.innerText = a;
+    });
+
+    minus.addEventListener("click", ()=>{
+      if(a > 1){
+        a--;
+        a = (a < 10) ? "0" + a : a;
+        num.innerText = a;
+      }
+    });
+
+  </script>
+
+</body>
+</html>
+
+
+
+  <!-- ============================================================== -->
+  <style>
+    .item-content{
+     margin-top: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     position: fixed;
+     bottom: 10px;
+    }
+   .item-content a {
+     display: inline-block;
+     padding: 10px 15px;
+     color: white;
+     background-color: #1b3857;
+     text-decoration: none;
+     border-radius: 10px;
+     text-align: center;
+     width: 400px;
+     border: 1px solid rgb(211, 211, 228);
+   }
+   .item-content a:hover {
+     background-color: #08062b;
+     color: rgb(195, 195, 219);
+     border: 1px solid rgb(166, 166, 199);
+   }   
+   @media (max-width: 500px) {
+  .item-content a {
+    width: 90%;
+  }
+}
+  </style>
+  
+  <div class="item-content">
+   <a href="../Increment-and-decreament-button.zip" download="Increment-and-decreament-button.zip">Download source code</a>
+  </div>

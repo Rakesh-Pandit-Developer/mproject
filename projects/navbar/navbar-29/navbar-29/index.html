@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar 14</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="item">Home</a>
+      <a class="item">About</a>
+      <div class="item">
+        Skills
+        <div class="dropdown">
+          <div>
+            <a>React</a>
+            <a>Angular</a>
+            <a>Vue</a>
+          </div>
+        </div>
+      </div>
+      <a class="item">Contact</a>
+      <div class="underline"></div>
+    </nav>   
+   
+  </body>
+</html>
+
+
+
+<!-- ============================================================== -->
+<style>
+  .item-content{
+   margin-top: 50px;
+   text-align: center;
+   display: block;
+   width: 100%;
+   position: fixed;
+   bottom: 0;
+   z-index: 1000;
+
+  }
+ .item-content a {
+   display: inline-block;
+   padding: 10px 15px;
+   color: white;
+   background-color: #007bff;
+   text-decoration: none;
+   border-radius: 5px;  
+   text-align: center;
+   width: 80%;
+ }
+
+ .item-content a:hover {
+   background-color: #0056b3;
+ }
+
+</style>  
+<br><br><hr>
+<div class="item-content">
+ <a href="../navbar-14.zip" download="navbar-14.zip">Download source code</a>
+</div>

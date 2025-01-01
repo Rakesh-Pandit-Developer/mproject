@@ -1,0 +1,95 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #007BFF;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.5s ease;
+}
+
+body.dark-theme {
+  --bg-color: #1a1a2e;
+  --text-color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--bg-color);
+  border-bottom: 2px solid var(--text-color);
+}
+
+#themeBtn {
+  background: none;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 3D effect for the toggle button using ::before */
+#themeBtn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: var(--shadow-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+#themeBtn:hover {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Apply 3D effect on hover */
+#themeBtn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+nav {
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  color: #007BFF;
+  border-bottom: 2px solid #007BFF;
+}
+
+nav ul li a:hover {
+  color: #0056b3;
+}

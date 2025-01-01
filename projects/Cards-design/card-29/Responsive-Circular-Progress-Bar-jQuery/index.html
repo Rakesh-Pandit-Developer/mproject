@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Circular Progress Bar | </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">HTML & CSS</div>
+      </div>
+      <div class="card js">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">JavaScript</div>
+      </div>
+      <div class="card react">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">React JS</div>
+      </div>
+    </div>
+    
+    <script>
+      let options = {
+        startAngle: -1.55,
+        size: 150,
+        value: 0.85,
+        fill: {gradient: ['#a445b2', '#fa4299']}
+      }
+      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+      function(event, progress, stepValue){
+        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+      });
+      $(".js .bar").circleProgress({
+        value: 0.70
+      });
+      $(".react .bar").circleProgress({
+        value: 0.60
+      });
+    </script>
+
+  </body>
+</html>
+
+
+
+  <!-- ============================================================== -->
+  <style>
+    .item-content{
+     margin-top: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     position: fixed;
+     bottom: 10px;
+     z-index: 1000;
+    }
+   .item-content a {
+     display: inline-block;
+     padding: 10px 15px;
+     color: white;
+     background-color: #1b3857;
+     text-decoration: none;
+     border-radius: 10px;
+     text-align: center;
+     width: 400px;
+     border: 1px solid rgb(211, 211, 228);
+   }
+   @media (max-width: 500px) {
+  .item-content a {
+    width: 90%;
+  }
+}
+   .item-content a:hover {
+     background-color: #08062b;
+     color: rgb(195, 195, 219);
+     border: 1px solid rgb(166, 166, 199);
+   }
+  </style>
+  
+  <div class="item-content">
+   <a href="../Responsive-Circular-Progress-Bar-jQuery.zip" download="Responsive-Circular-Progress-Bar-jQuery.zip">Download source code</a>
+  </div>

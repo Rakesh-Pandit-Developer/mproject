@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> All Hamburger Menu Transformtion |  </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <!-- Boxicons CSS -->
+   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+ <div class="box">
+   <div class="icon">
+     <i class='bx bx-menu open'></i>
+     <i class='bx bx-x close' ></i>
+   </div>
+   <div class="icon line">
+     <i class='bx bx-menu open'></i>
+     <i class='bx bx-list-ul close'></i>
+   </div>
+   <div class="icon">
+      <i class='bx bx-grid-alt open'></i>
+      <i class='bx bx-x close'></i>
+    </div>
+    <div class="icon line">
+       <i class='bx bx-menu open'></i>
+       <i class='bx bx-menu-alt-right close' ></i>
+     </div>
+     <div class="icon">
+       <i class='bx bx-menu open'></i>
+       <i class='bx bx-right-arrow-alt close' ></i>
+     </div>
+ </div>
+<script>
+let menuBtn = document.querySelectorAll(".icon");
+ for (var i = 0; i < menuBtn.length; i++) {
+   menuBtn[i].addEventListener("click",(e)=>{
+     console.log(e.target);
+   e.target.classList.toggle("active");
+   });
+ }
+</script>
+
+</body>
+</html>
+
+
+  <!-- ============================================================== -->
+  <style>
+    .item-content{
+     margin-top: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     position: fixed;
+     bottom: 10px;
+    }
+   .item-content a {
+     display: inline-block;
+     padding: 10px 15px;
+     color: white;
+     background-color: #1b3857;
+     text-decoration: none;
+     border-radius: 10px;
+     text-align: center;
+     width: 400px;
+     border: 1px solid rgb(211, 211, 228);
+   }
+   .item-content a:hover {
+     background-color: #08062b;
+     color: rgb(195, 195, 219);
+     border: 1px solid rgb(166, 166, 199);
+   }   
+   @media (max-width: 500px) {
+  .item-content a {
+    width: 90%;
+  }
+}
+  </style>
+  
+  <div class="item-content">
+   <a href="../Hamburger-Menu-Transfrmation.zip" download="Hamburger-Menu-Transfrmation.zip">Download source code</a>
+  </div>

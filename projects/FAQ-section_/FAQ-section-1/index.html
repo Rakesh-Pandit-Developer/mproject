@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .faq {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      position: relative; /* For positioning ::before */
+    }
+
+    .faq-header {
+      cursor: pointer;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative; /* For ::before */
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Adding 3D effect with ::before pseudo-element */
+    .faq-header::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      width: 20px;
+      height: 20px;
+      background-color: #3498db;
+      border-radius: 50%;
+      transform: translateY(-50%) scale(1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faq-header:hover {
+      background-color: #e8e8e8;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* On hover, increase the size and shadow of the dot */
+    .faq-header:hover::before {
+      transform: translateY(-50%) scale(1.5);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .faq-header::after {
+      content: "+";
+      font-size: 20px;
+      color: #007BFF;
+      transition: content 0.3s ease;
+    }
+
+    .faq-header.active::after {
+      content: "-";
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      padding: 0 15px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .faq-content.open {
+      padding: 15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <!-- FAQ Item -->
+    <div class="faq">
+      <div class="faq-header">What is a static website?</div>
+      <div class="faq-content">
+        A static website is a site where the content is fixed and does not change dynamically.
+      </div>
+    </div>
+
+    <!-- FAQ Item -->
+    <div class="faq">
+      <div class="faq-header">How do I create a FAQ section?</div>
+      <div class="faq-content">
+        You can create a FAQ section using HTML, CSS for styling, and JavaScript for interactivity.
+      </div>
+    </div>
+
+    <!-- FAQ Item -->
+    <div class="faq">
+      <div class="faq-header">Can I add animations to the FAQ section?</div>
+      <div class="faq-content">
+        Yes, you can use CSS transitions or JavaScript to add animations when the FAQ expands or collapses.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // FAQ Interaction Script
+    const faqHeaders = document.querySelectorAll('.faq-header');
+
+    faqHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+
+        // Toggle active state
+        header.classList.toggle('active');
+
+        // Toggle FAQ content visibility
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null; // Collapse
+          content.classList.remove('open');
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px"; // Expand
+          content.classList.add('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+  <!-- ============================================================== -->
+  <style>
+    .item-content{
+     margin-top: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     position: fixed;
+     bottom: 0;
+  
+    }
+   .item-content a {
+     display: inline-block;
+     padding: 10px 15px;
+     color: white;
+     background-color: #007bff;
+     text-decoration: none;
+     border-radius: 5px;
+     text-align: center;
+     width: 80%;
+   }
+  
+   .item-content a:hover {
+     background-color: #0056b3;
+   }
+  
+  </style>
+  <br><br><hr>
+  <div class="item-content">
+   <a href="index.zip" download="index.zip">Download source code</a>
+  </div>

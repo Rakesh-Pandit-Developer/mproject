@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipping Card UI Design</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <div class="card front-face">
+        <header>
+          <span class="logo">
+            <img src="images/logo.png" alt="" />
+            <h5>Master Card</h5>
+          </span>
+          <img src="images/chip.png" alt="" class="chip" />
+        </header>
+
+        <div class="card-details">
+          <div class="name-number">
+            <h6>Card Number</h6>
+            <h5 class="number">8050 2030 3020 5040</h5>
+            <h5 class="name">Prem Kumar Shahi</h5>
+          </div>
+
+          <div class="valid-date">
+            <h6>Valid Thru</h6>
+            <h5>05/28</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="card back-face">
+        <h6>
+          For customer service call +977 4343 3433 or email at
+          mastercard@gmail.com
+        </h6>
+        <span class="magnetic-strip"></span>
+        <div class="signature"><i>005</i></div>
+        <h5>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
+          maiores sed doloremque nesciunt neque beatae voluptatibus doloribus.
+          Libero et quis magni magnam nihil temporibus? Facere consectetur
+          dolore reiciendis et veniam.
+        </h5>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>
+
+
+
+  <!-- ============================================================== -->
+  <style>
+    .item-content{
+     margin-top: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     position: fixed;
+     bottom: 10px;
+     z-index: 1000;
+    }
+   .item-content a {
+     display: inline-block;
+     padding: 10px 15px;
+     color: white;
+     background-color: #1b3857;
+     text-decoration: none;
+     border-radius: 10px;
+     text-align: center;
+     width: 400px;
+     border: 1px solid rgb(211, 211, 228);
+   }
+   .item-content a:hover {
+     background-color: #08062b;
+     color: rgb(195, 195, 219);
+     border: 1px solid rgb(166, 166, 199);
+   }   
+   @media (max-width: 500px) {
+  .item-content a {
+    width: 90%;
+  }
+}
+  </style>
+  
+  <div class="item-content">
+   <a href="../banking-card.zip" download="banking-card.zip">Download source code</a>
+  </div>
+ 

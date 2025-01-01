@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>sidebar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #02002b;
+    }
+    
+    header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #a1a1c5;
+      color: rgb(10, 4, 44);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background-color: #1d1c2c;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(51, 26, 26, 0.1);
+      padding: 10px;
+      overflow: hidden;
+      border: 1px solid rgb(89, 84, 99);
+    }
+
+    .slider {
+      display: flex;
+      gap: 10px;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      cursor: pointer;
+      padding-bottom: 10px;
+    }
+
+    .slider::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .slider::-webkit-scrollbar-thumb {
+      background: gray;
+      border-radius: 10px;
+    }
+
+    .slider::-webkit-scrollbar-thumb:hover {
+      background: darkgray;
+    }
+
+    .slider img {
+      object-fit: cover;
+      border-radius: 10px;
+      flex-shrink: 0;
+      width: 100%;
+      border: 1px solid white;
+
+    }
+
+    .item-content h3 {
+      font-size: 20px;
+      text-align: center;
+      color: rgb(175, 182, 204);
+    }
+
+   
+   
+    .item-content{
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item-content a {
+      display: inline-block;
+      padding: 10px 15px;
+      color: rgb(146, 144, 175);
+      background-color: #000000;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+      border: 1px solid rgb(46, 58, 92);
+      width: 90%;
+      margin-bottom: 10px;
+    }
+    .item-content a:hover {
+      background-color: #052446;
+      color: #c8c7db;
+      border: 1px solid rgb(56, 67, 100);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>sidebar</h1>
+  </header>
+  
+  <div class="container">
+    <div class="row g-3">
+      <div class="startRow col-12 col-sm-6 col-lg-3  text-center">
+        <div class="row justify-content-between">
+         
+          <!-- sidebar-1 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img  src="sidebar-1/sidebar-1.png" alt="sidebar-1">
+                <img  src="sidebar-1/sidebar-1-open.png" alt="sidebar-1">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-1</h3>
+                <a href="sidebar-1/sidebar-2/index.html" target="_blank">Open</a>
+                <a href="sidebar-1/sidebar-2.zip" download="sidebar-1">Download</a>
+              </div>
+            </div>
+          </div>
+         
+          <!-- sidebar-2 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img  src="sidebar-2/sidebar-2.png" alt="sidebar-2">
+                <img  src="sidebar-2/Sidebar-2-close.png" alt="sidebar-2">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-2</h3>
+                <a href="sidebar-2/Sidebar-3/index.html" target="_blank">Open</a>
+                <a href="sidebar-2/Sidebar-3.zip" download="sidebar-2">Download</a>
+              </div>
+            </div>
+          </div>
+         
+          <!-- sidebar-3 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img  src="sidebar-3/sidebar-3.png" alt="sidebar-3">
+                <img  src="sidebar-3/sidebar-3-open.png" alt="sidebar-3">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-3</h3>
+                <a href="sidebar-3/animated-sidebar-menu-using-only-html-css/index.html" target="_blank">Open</a>
+                <a href="sidebar-3/animated-sidebar-menu-using-only-html-css.zip" download="sidebar-3">Download</a>
+              </div>
+            </div>
+          </div>
+         
+          <!-- sidebar-4 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img  src="sidebar-4/sidebar-4.png" alt="sidebar-4">
+                <img  src="sidebar-4/sidebar-4-open.png" alt="sidebar-4">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-4</h3>
+                <a href="sidebar-4/dropdown-sidebar/index.html" target="_blank">Open</a>
+                <a href="sidebar-4/dropdown-sidebar.zip" download="sidebar-4">Download</a>
+              </div>
+            </div>
+          </div>
+         
+          <!-- sidebar-5 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img  src="sidebar-5/sidebar-5.png" alt="sidebar-5">
+                <img  src="sidebar-5/sidebar-5-open.png" alt="sidebar-5">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-5</h3>
+                <a href="sidebar-5/Glassmorphism-Sidebar-HTML-CSS/index.html" target="_blank">Open</a>
+                <a href="sidebar-5/Glassmorphism-Sidebar-HTML-CSS.zip" download="sidebar-5">Download</a>
+              </div>
+            </div>
+          </div>
+         
+          <!-- sidebar-6 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img  src="sidebar-6/sidebar-6.png" alt="sidebar-6">
+                <img  src="sidebar-6/sidebar-6-open.png" alt="sidebar-6">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-6</h3>
+                <a href="sidebar-6/nav-menubar/index.html" target="_blank">Open</a>
+                <a href="sidebar-6/nav-menubar.zip" download="sidebar-6">Download</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <div class="startRow col-12 col-sm-6 col-lg-3  text-center">
+        <div class="row justify-content-between">
+        
+          <!-- sidebar-7 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-7/sidebar-7.png" alt="sidebar-7">
+                <img src="sidebar-7/sidebar-7-open.png" alt="sidebar-7">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-7</h3>
+                <a href="sidebar-7/Neumorphism-Sidebar-Menu/index.html" target="_blank">Open</a>
+                <a href="sidebar-7/Neumorphism-Sidebar-Menu.zip" download="sidebar-7">Download</a>
+              </div>
+            </div>
+          </div>
+        
+          <!-- sidebar-8 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-8/sidebar-8.png" alt="sidebar-8">
+                <img src="sidebar-8/sidebar-8-open.png" alt="sidebar-8">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-8</h3>
+                <a href="sidebar-8/Pure-Css-Side-Menu-Bar/index.html" target="_blank">Open</a>
+                <a href="sidebar-8/Pure-Css-Side-Menu-Bar.zip" download="sidebar-8">Download</a>
+              </div>
+            </div>
+          </div>
+        
+          <!-- sidebar-9 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-9/sidebar-9.png" alt="sidebar-9">
+                <img src="sidebar-9/sidebar-9-open.png" alt="sidebar-9">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-9</h3>
+                <a href="sidebar-9/Responsive-Side-Menu-Bar-CSS/index.html" target="_blank">Open</a>
+                <a href="sidebar-9/Responsive-Side-Menu-Bar-CSS.zip" download="sidebar-9">Download</a>
+              </div>
+            </div>
+          </div>
+        
+          <!-- sidebar-10 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-10/sidebar-10.png" alt="sidebar-10">
+                <img src="sidebar-10/sidebar-10-open.png" alt="sidebar-10">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-10</h3>
+                <a href="sidebar-10/Responsive-Sidebar-Menu-HTML-CSS/index.html" target="_blank">Open</a>
+                <a href="sidebar-10/Responsive-Sidebar-Menu-HTML-CSS.zip" download="sidebar-10">Download</a>
+              </div>
+            </div>
+          </div>
+        
+          <!-- sidebar-11 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-11/sidebar-11.png" alt="sidebar-11">
+                <img src="sidebar-11/sidebar-11-open.png" alt="sidebar-11">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-11</h3>
+                <a href="sidebar-11/responsive-side-navigation-bar/index.html" target="_blank">Open</a>
+                <a href="sidebar-11/responsive-side-navigation-bar.zip" download="sidebar-11">Download</a>
+              </div>
+            </div>
+          </div>
+        
+          <!-- sidebar-12 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-12/sidebar-12.png" alt="sidebar-12">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-12</h3>
+                <a href="sidebar-12/Side-Navigation-Bar/index.html" target="_blank">Open</a>
+                <a href="sidebar-12/Side-Navigation-Bar.zip" download="sidebar-12">Download</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ----------------------------- -->
+      <div class="startRow col-12 col-sm-6 col-lg-3  text-center">
+        <div class="row justify-content-between">
+          
+          <!-- sidebar-13 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-13/sidebar-13.png" alt="sidebar-13">
+                <img src="sidebar-13/sidebar-13-close.png" alt="sidebar-13">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-13</h3>
+                <a href="sidebar-13/Side-Navigation-Bar-HTML-CSS-JavaScript/index.html" target="_blank">Open</a>
+                <a href="sidebar-13/Side-Navigation-Bar-HTML-CSS-JavaScript.zip" download="sidebar-13">Download</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- sidebar-14 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-14/sidebar-14.png" alt="sidebar-14">
+                <img src="sidebar-14/sidebar-14-open.png" alt="sidebar-14">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-14</h3>
+                <a href="sidebar-14/Sidebar-Menu/index.html" target="_blank">Open</a>
+                <a href="sidebar-14/Sidebar-Menu.zip" download="sidebar-14">Download</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- sidebar-15 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-15/sidebar-15.png" alt="sidebar-15">
+                <img src="sidebar-15/sidebar-15-open.png" alt="sidebar-15">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-15</h3>
+                <a href="sidebar-15/Sidebar-Menu-CodingLab/index.html" target="_blank">Open</a>
+                <a href="sidebar-15/Sidebar-Menu-CodingLab.zip" download="sidebar-15">Download</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- sidebar-16 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-16/sidebar-16.png" alt="sidebar-16">
+                <img src="sidebar-16/sidebar-16-open.png" alt="sidebar-16">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-16</h3>
+                <a href="sidebar-16/Sidebar-Menu-Dark-Light-Mode/index.html" target="_blank">Open</a>
+                <a href="sidebar-16/Sidebar-Menu-Dark-Light-Mode.zip" download="sidebar-16">Download</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- sidebar-17 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-17/sidebar-17.png" alt="sidebar-17">
+                <img src="sidebar-17/sidebar-17-open.png" alt="sidebar-17">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-17</h3>
+                <a href="sidebar-17/Sidebar-Menu-Sub-Menu[JS]/index.html" target="_blank">Open</a>
+                <a href="sidebar-17/Sidebar-Menu-Sub-Menu[JS].zip" download="sidebar-17">Download</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- ----------------------------- -->
+      <div class="startRow col-12 col-sm-6 col-lg-3  text-center">
+        <div class="row justify-content-between">
+         
+          <!-- sidebar-18 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-18/sidebar-18.png" alt="sidebar-18">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-18</h3>
+                <a href="sidebar-18/SidebarTransitions-master/index.html" target="_blank">Open</a>
+                <a href="sidebar-18/SidebarTransitions-master.zip" download="sidebar-18">Download</a>
+              </div>
+            </div>
+          </div>
+         
+          <!-- sidebar-19 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-19/sidebar-19.png" alt="sidebar-19">
+                <img src="sidebar-19/sidebar-19-open.png" alt="sidebar-19">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-19</h3>
+                <a href="sidebar-19/sidebar-icon-hover/index.html" target="_blank">Open</a>
+                <a href="sidebar-19/sidebar-icon-hover.zip" download="sidebar-19">Download</a>
+              </div>
+            </div>
+          </div>
+         
+          <!-- sidebar-20 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-20/sidebar-20.png" alt="sidebar-20">
+                <img src="sidebar-20/sidebar-20-close.png" alt="sidebar-20">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-20</h3>
+                <a href="sidebar-20/sidebar-menu/index.html" target="_blank">Open</a>
+                <a href="sidebar-20/sidebar-menu.zip" download="sidebar-20">Download</a>
+              </div>
+            </div>
+          </div>
+         
+          <!-- sidebar-21 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-21/sidebar-21.png" alt="sidebar-21">
+                <img src="sidebar-21/sidebar-21-open.png" alt="sidebar-21">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-21</h3>
+                <a href="sidebar-21/sidebar-menu-with-icon/index.html" target="_blank">Open</a>
+                <a href="sidebar-21/sidebar-menu-with-icon.zip" download="sidebar-21">Download</a>
+              </div>
+            </div>
+          </div>
+         
+          <!-- sidebar-22 -->
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="slider">
+                <img src="sidebar-22/sidebar-22.png" alt="sidebar-22">
+                <img src="sidebar-22/sidebar-22-open.png" alt="sidebar-22">
+                <img src="sidebar-22/sidebar-22-responsive.png" alt="sidebar-22">
+              </div>
+              <div class="item-content">
+                <h3>sidebar-22</h3>
+                <a href="sidebar-22/sidebar-normal/index.html" target="_blank">Open</a>
+                <a href="sidebar-22/sidebar-normal.zip" download="sidebar-22">Download</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

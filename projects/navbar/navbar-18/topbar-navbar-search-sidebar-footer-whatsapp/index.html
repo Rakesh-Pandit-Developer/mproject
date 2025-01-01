@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="home.css">
+  <script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.19/dist/heroicons.js"></script>
+
+</head>
+<body>
+ 
+<body>
+<!-- =============== Topbar ================ -->
+  <div class="topbarSection align-items-center justify-content-center">
+
+    <!-- ===================== topbar Space Line ==================== -->
+    <div class="topbarSpaceLine">
+        <div class="topbarSpaceLine-1"></div>
+        <div class="topbarSpaceLine-2"></div>
+    </div>
+
+    <!-- ======================== topbarBrand Line ======================= -->
+    <div class="topbarBrandLine container px-3">
+        <div class="topbarBrandContent row justify-content-between align-items-center d-flex">
+
+            <!-- ------------------ topbarLogo and Title ------------------- -->
+            <div class="topbarLogoTitle col-8 col-md-5  order-1 order-md-1">
+                <img src="img/topbarLogoTitle.png" alt="topbarLogo Title" class="img-fluid">
+            </div>
+
+            <!-- ------------------ topbarTimes ------------------- -->
+            <div class="topbarTimes col-12 col-md-4  order-3 order-md-2">
+                <div class="row d-flex align-items-center justify-content-center text-center">
+                    <!-- Nepal Time -->
+                    <div class="topbarTimeBox col-auto px-1 align-items-around">
+                        <div class="timePlace d-flex justify-content-start">
+                            <img src="img/nepal-flag.png" alt="Nepal Flag" class="flag img-fluid icon-img">
+                            <div class="city-name mx-2">Kathmandu</div>
+                        </div>
+                        <div id="nepal-time" class="time">--:--:--</div>
+                    </div>
+
+                    <!-- Jordan Time -->
+                    <div class="topbarTimeBox col-auto">
+                        <div class="timePlace d-flex">
+                            <img src="img/jordan-flag.png" alt="Jordan Flag" class="flag img-fluid icon-img">
+                            <div class="city-name mx-2">Amman</div>
+                        </div>
+                        <div id="topbarJordanTime" class="time">--:--:--</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------ topbarFlags ------------------- -->
+            <div class="topbarFlags col-4 col-md-3  order-2 order-md-3">
+                <img src="img/topbarFlags.png" alt="Nepal Jordan flag" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =============== Navbar ================ -->
+   <div class="navBar mx-0" style="  position: sticky; top: 0;">
+    <div class="container">
+        <div class="navBarContent">
+            <!-- <h4 class="navBar-title order-2">
+               <a href="#"> Logo</a>
+            </h4> -->
+
+            <button type="button" class="navToggler order-3 order-lg-1">
+               <span></span>
+            </button>
+            <nav class="nav order-4 order-lg-2">
+               <ul>
+                <li><a href="index.html" class="active"> Home</a></li>
+                <li><a href="consular-services.html">Consular Services</a></li>
+                <li><a href="jordan-info.html"> Information About Jordan</a></li>
+                <li><a href="visa-info.html"> Visa Information</a></li>
+                <li><a href="useful-link.html"> Useful Link</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+              </ul>
+            </nav>
+            <form id="searchForm" class="order-1 order-lg-3" >
+              <input type="text" id="searchBar" placeholder="Search here..." onkeyup="searchPages()">
+              <ul id="searchResults" class="list-group "></ul>
+            </form>
+        </div>
+    </div>
+   </div>
+
+
+<!-- =============== Sidebar ================ -->
+  <div class="sidebarBody" >
+    <sideBar id="sideBar" class="sideBarClose">
+      <ul>
+        <li>
+          <span class="logo">coding2go</span>
+          <button onclick="togglesideBar()" id="sideBarToggleBtn">
+            <svg  class="sideBarIconOpen" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/></svg>
+          
+            <svg class="sideBarIconClose sideBarHidden" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+          </button>
+          
+        </li>
+        <li>
+          <a href="#">
+            <svg class="icn" width="24px" height="24px" fill="#d11616">
+              <use xlink:href="icons/contact-form.svg#contact-form"></use>
+            </svg>
+            <span>Contact Form</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <svg class="icn" width="24px" height="24px" fill="#d11616">
+              <use xlink:href="icons/currency-exchange.svg#currency-exchange"></use>
+            </svg>
+            <span>currency exchange</span>
+          </a>
+        </li>
+
+        <li>
+          <button onclick=toggleSubMenu(this) class="sideBarDropdownBtn">
+            <svg class="icn" width="24px" height="24px" fill="#d11616">
+              <use xlink:href="icons/link-chain.svg#link-chain"></use>
+            </svg>
+            <span>Useful Link</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+          </button>
+          <ul class="sideBarSubMenu">
+            <div>
+              <li><a href="#">Folder</a></li>
+              <li><a href="#">Document</a></li>
+              <li><a href="#">Project</a></li>
+            </div>
+          </ul>
+        </li>
+        
+        <li>
+          <button onclick=toggleSubMenu(this) class="sideBarDropdownBtn">
+            <svg class="icn" width="24px" height="24px" fill="#d11616">
+              <use xlink:href="icons/social-media.svg#social-media"></use>
+            </svg>
+            <span>Social Media</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+          </button>
+          <ul class="sideBarSubMenu">
+            <div>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">instagram</a></li>
+              <li><a href="#">youtube</a></li>
+              <li><a href="#">WhatsApp</a></li>
+              <li><a href="#">Email</a></li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <svg class="icn" width="24px" height="24px" fill="#d11616">
+              <use xlink:href="icons/g-map2.svg#g-map2"></use>
+            </svg>
+            <span>Google Map</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <svg class="icn" width="24px" height="24px" fill="#d11616">
+              <use xlink:href="icons/weather-3.svg#weather-3"></use>
+            </svg>
+            <span>weather</span>
+          </a>
+        </li>
+        </li>
+
+        <li>
+          <a href="#">
+            <svg class="icn" width="24px" height="24px" fill="#d11616">
+              <use xlink:href="icons/gallery.svg#gallery"></use>
+            </svg>
+            <span>Gallery</span>
+          </a>
+        </li>
+      </ul>
+
+    </sideBar>
+  </div>
+
+
+<!-- =============== Whatsapp ================ -->
+  <a href="https://wa.me/9779745604597?text=Hi,%20I%20am%20interested%20in%20your%20services!" 
+  class="whatsapp-btn" target="_blank">
+    <svg class="icon" alt="WhatsApp">
+      <use xlink:href="icons/whatsapp-2.svg#whatsapp-2"></use>
+    </svg>
+  </a>  
+
+  <main>
+
+    <div id="home1">rakesh pandit
+      <h1>Rakesh Pandit</h1>
+      <p>this name is brand</p>
+   </div>
+    <div id="home1">rakesh pandit
+      <h1>Rakesh Pandit</h1>
+      <p>this name is brand</p>
+      <p>this name is brand</p>
+   </div>
+  </main>
+
+
+
+
+ 
+  
+<!-- =============== Footer ================ -->
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- Menu Section -->
+          <div class="col-md-4">
+            <h5>Menu</h5>
+            <ul>
+              <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+              <li><a href="consular-services.html"><i class="bi bi-briefcase-fill"></i> Consular Services</a></li>
+              <li><a href="jordan-info.html"><i class="bi bi-info-circle-fill"></i> Information About Jordan</a></li>
+              <li><a href="visa-info.html"><i class="bi bi-file-earmark-text-fill"></i> Visa Information</a></li>
+              <li><a href="useful-link.html"><i class="bi bi-link-45deg"></i> Useful Link</a></li>
+              <li><a href="contact.html"><i class="bi bi-telephone-fill"></i> Contact</a></li>
+            </ul>
+          </div>
+  
+          <!-- Contact Us Section -->
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <ul class="office-details">
+              <li><i class="bi bi-envelope-fill"></i> Email: <a href="mailto:Info@jordanconsulate.org.np">Info@jordanconsulate.org.np</a>
+              </li>
+
+              <li><i class="bi bi-whatsapp"></i> WhatsApp: <a href="https://wa.me/9779851007984" target="_blank">+9779851007984</a>
+              </li>
+
+              <li><i class="bi bi-telephone-fill"></i> Phone: <a href="tel:+9779851007984">+9779851007984</a>
+              </li>
+
+              <li>
+                <svg class="icon facebook" width="30" height="30">
+                  <use href="icons/facebook.svg#facebook"></use>
+              </svg>
+              <svg class="icon instagram" width="30" height="30">
+                  <use href="icons/instagram.svg#instagram"></use>
+              </svg>
+              <svg class="icon youtube" width="30" height="30">
+                  <use href="icons/youtube.svg#youtube"></use>
+              </svg>
+              <svg class="icon whatsapp" width="30" height="30">
+                  <use href="icons/whatsapp.svg#whatsapp"></use>
+              </svg>
+              </li>
+
+              <li>
+                  <!-- Modal Trigger Button for Contact Form -->
+                  <a href="#" class="btn-contact" style=" color: var(--bg-color-1);"  data-bs-toggle="modal" data-bs-target="#contactModal"><i class="bi bi-envelope-paper-fill"></i> Contact Form</a>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Office Details Section -->
+          <div class="col-md-4">
+            <h5>Office Info</h5>
+            <ul class="office-details">
+              <li><i class="bi bi-geo-alt-fill"></i> Address: <br> Office of the Honorary Consul, Kathmandu, Nepal</li>
+              <li><i class="bi bi-clock-fill"></i> Office Hours: <br> Mon - Fri: 9:00 AM - 5:00 PM</li>
+              <li><i class="bi bi-calendar-event-fill"></i> Saturday: Closed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="copyright container px-3">
+        © 2024 Office of the <span class="text-success"> Honorary Consul of The Hashemite Kingdom of Jordan</span> in Nepal. All rights reserved.
+      </div>
+    </footer>
+  
+    <!-- Contact Form Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel"><i class="bi bi-envelope-paper-fill"></i> Contact Form</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- iframe to load external form -->
+            <iframe src="../contact-form/contactForm.html" style="width: 100%; height: 500px; border: none;"></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>   
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript" src="sidebar.js" defer></script>
+  <script type="text/javascript" src="navbar.js" defer></script>
+  <script type="text/javascript" src="searchbar.js" defer></script>
+  <script type="text/javascript" src="time.js" defer></script>
+
+</body>
+</html>
+
+
+
+<!-- ============================================================== -->
+<style>
+  .item-content{
+   margin-top: 50px;
+   text-align: center;
+   display: block;
+   width: 100%;
+   position: fixed;
+   bottom: 0;
+
+  }
+ .item-content a {
+   display: inline-block;
+   padding: 10px 15px;
+   color: white;
+   background-color: #007bff;
+   text-decoration: none;
+   border-radius: 5px;
+   text-align: center;
+   width: 80%;
+ }
+
+ .item-content a:hover {
+   background-color: #0056b3;
+ }
+
+</style>
+<br><br><hr>
+<div class="item-content">
+ <a href="../topbar-navbar-search-sidebar-footer-whatsapp.zip" download="topbar-navbar-search-sidebar-footer-whatsapp.zip">Download source code</a>
+</div>

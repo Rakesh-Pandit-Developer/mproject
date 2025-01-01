@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card UI Design</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="profile-card">
+    <!-- Profile Image -->
+    <div class="image">
+      <img src="profile.jpg" alt="Profile Image" class="profile-img" />
+    </div>
+
+    <!-- Profile Details -->
+    <div class="text-data">
+      <span class="name">CodingLab</span>
+      <span class="job">YouTuber & Blogger</span>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="media-buttons">
+      <a href="#" style="background: #4267b2" class="link">
+        <i class="bx bxl-facebook"></i>
+      </a>
+      <a href="#" style="background: #1da1f2" class="link">
+        <i class="bx bxl-twitter"></i>
+      </a>
+      <a href="#" style="background: #e1306c" class="link">
+        <i class="bx bxl-instagram"></i>
+      </a>
+      <a href="#" style="background: #ff0000" class="link">
+        <i class="bx bxl-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Subscribe and Message Buttons -->
+    <div class="buttons">
+      <button class="button">Subscribe</button>
+      <button class="button">Message</button>
+    </div>
+
+    <!-- Analytics -->
+    <div class="analytics">
+      <div class="data">
+        <i class="bx bx-heart"></i>
+        <span class="number">60k</span>
+      </div>
+      <div class="data">
+        <i class="bx bx-message-rounded"></i>
+        <span class="number">20k</span>
+      </div>
+      <div class="data">
+        <i class="bx bx-share"></i>
+        <span class="number">12k</span>
+      </div>
+    </div>
+  </div>
+    
+</body>
+
+</html>
+
+
+
+  <!-- ============================================================== -->
+  <style>
+    .item-content{
+     margin-top: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     position: fixed;
+     bottom: 10px;
+     z-index: 1000;
+    }
+   .item-content a {
+     display: inline-block;
+     padding: 10px 15px;
+     color: white;
+     background-color: #1b3857;
+     text-decoration: none;
+     border-radius: 10px;
+     text-align: center;
+     width: 400px;
+     border: 1px solid rgb(211, 211, 228);
+   }
+   .item-content a:hover {
+     background-color: #08062b;
+     color: rgb(195, 195, 219);
+     border: 1px solid rgb(166, 166, 199);
+   }   
+   @media (max-width: 500px) {
+  .item-content a {
+    width: 90%;
+  }
+}
+  </style>
+  
+  <div class="item-content">
+   <a href="../Profile-Card-UI-HTML-CSS.zip" download="Profile-Card-UI-HTML-CSS.zip">Download source code</a>
+  </div>

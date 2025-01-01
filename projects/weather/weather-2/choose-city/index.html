@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    /* Resetting styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.weather-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Location Section Styles */
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.city-list {
+    list-style: none;
+    padding: 0;
+    display: none;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.city-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.city-list li:hover {
+    background-color: #ddd;
+}
+
+/* Weather Info Styles */
+.weather-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.weather-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#weatherIcon {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+</style>
+<body>
+    <div class="weather-container">
+        <h1>Weather App</h1>
+        <div class="location">
+            <button id="showCities">Choose City</button>
+            <ul id="cityList" class="city-list">
+                <li data-city="New York">New York</li>
+                <li data-city="Delhi">Delhi</li>
+                <li data-city="Kathmandu">Kathmandu</li>
+                <li data-city="London">London</li>
+                <li data-city="Tokyo">Tokyo</li>
+            </ul>
+        </div>
+        <div class="weather-info">
+            <p id="cityName"></p>
+            <div id="weatherIcon"></div>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+        </div>
+    </div>   
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        // Show/Hide city list on button click
+document.getElementById("showCities").addEventListener("click", function() {
+    const cityList = document.getElementById("cityList");
+    cityList.style.display = cityList.style.display === "none" || cityList.style.display === "" ? "block" : "none";
+});
+
+// Handle city click to get weather
+document.querySelectorAll("#cityList li").forEach(function(cityItem) {
+    cityItem.addEventListener("click", function() {
+        const city = cityItem.getAttribute("data-city");
+        getWeather(city);
+        document.getElementById("cityList").style.display = "none";  // Hide city list after selection
+    });
+});
+
+function getWeather(city) {
+    if (city === "") {
+        alert("Please select a city");
+        return;
+    }
+
+    const apiKey = "YOUR_API_KEY"; // MetaWeather API ka API key yahan daalein
+    const url = `https://goweather.herokuapp.com/weather/${city}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert("City not found!");
+                return;
+            }
+
+            document.getElementById("cityName").textContent = `City: ${city}`;
+            document.getElementById("temperature").textContent = `Temperature: ${data.temperature}`;
+            document.getElementById("description").textContent = `Description: ${data.description}`;
+            document.getElementById("humidity").textContent = `Humidity: ${data.humidity}`;
+            document.getElementById("windSpeed").textContent = `Wind Speed: ${data.wind}`;
+
+            // Weather icon based on description
+            const description = data.description.toLowerCase();
+            let iconClass = '';
+            if (description.includes("sunny") || description.includes("clear")) {
+                iconClass = 'fas fa-sun';
+            } else if (description.includes("cloudy")) {
+                iconClass = 'fas fa-cloud';
+            } else if (description.includes("rain")) {
+                iconClass = 'fas fa-cloud-showers-heavy';
+            } else if (description.includes("snow")) {
+                iconClass = 'fas fa-snowflake';
+            } else {
+                iconClass = 'fas fa-smog';
+            }
+
+            document.getElementById("weatherIcon").innerHTML = `<i class="${iconClass}"></i>`;
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Something went wrong!");
+        });
+}
+
+    </script>
+</body>
+</html>
+
+
+ 
+
+
+<!-- ============================================================== -->
+<style>
+	.item-content{
+	 margin-top: 50px;
+	 text-align: center;
+	 display: block;
+	 width: 100%;
+	 position: fixed;
+	 bottom: 0;
+	 z-index: 1000;
+  
+	}
+   .item-content a {
+	 display: inline-block;
+	 padding: 10px 15px;
+	 color: white;
+	 background-color: #007bff;
+	 text-decoration: none;
+	 border-radius: 5px;  
+	 text-align: center;
+	 width: 80%;
+   }
+  
+   .item-content a:hover {
+	 background-color: #0056b3;
+   }
+  
+  </style>  
+  <br><br><hr>
+  <div class="item-content">
+   <a href="../choose-city.zip" download="choose-city.zip">Download source code</a>
+  </div>
+  

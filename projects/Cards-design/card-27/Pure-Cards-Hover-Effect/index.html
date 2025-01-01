@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <!-- <title>Responsive Cards</title> -->
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="cards">
+         <h2 class="header">
+            Responsive Cards CSS
+         </h2>
+         <div class="services">
+            <div class="content content-1">
+               <div class="fab fa-twitter"></div>
+               <h2>
+                  Twitter
+               </h2>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam aliquid non eligendi, nemo est neque reiciendis error?
+               </p>
+               <a href="#">Read More</a>
+            </div>
+            <div class="content content-2">
+               <div class="fab fa-instagram"></div>
+               <h2>
+                  Instagram
+               </h2>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam aliquid non eligendi, nemo est neque reiciendis error?
+               </p>
+               <a href="#">Read More</a>
+            </div>
+            <div class="content content-3">
+               <div class="fab fa-youtube"></div>
+               <h2>
+                  Youtube
+               </h2>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam aliquid non eligendi, nemo est neque reiciendis error?
+               </p>
+               <a href="#">Read More</a>
+            </div>
+         </div>
+      </div>
+ 
+   </body>
+</html>
+
+   
+
+
+  <!-- ============================================================== -->
+  <style>
+   .item-content{
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    z-index: 1000;
+   }
+  .item-content a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background-color: #1b3857;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    border: 1px solid rgb(211, 211, 228);
+  }   
+   @media (max-width: 500px) {
+  .item-content a {
+    width: 90%;
+  }
+}
+  .item-content a:hover {
+    background-color: #08062b;
+    color: rgb(195, 195, 219);
+    border: 1px solid rgb(166, 166, 199);
+  }
+ </style>
+ 
+ <div class="item-content">
+  <a href="../Pure-Cards-Hover-Effect.zip" download="Pure-Cards-Hover-Effect.zip">Download source code</a>
+ </div>

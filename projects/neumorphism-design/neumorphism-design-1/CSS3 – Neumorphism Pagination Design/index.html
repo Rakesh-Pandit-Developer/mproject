@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Neumorphism Pagination | </title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <ul class="pagination">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">Next</a></li>
+         </ul>
+      </div>   
+
+      <script>
+         $("li").click(function(){
+           $(this).addClass("active").siblings().removeClass("active");
+         });
+      </script>
+   </body>
+</html>
+
+
+
+<!-- ============================================================== -->
+<style>
+  .item-content{
+   margin-top: 50px;
+   text-align: center;
+   display: block;
+   width: 100%;
+   position: fixed;
+   bottom: 0;
+   z-index: 1000;
+
+  }
+ .item-content a {
+   display: inline-block;
+   padding: 10px 15px;
+   color: white;
+   background-color: #007bff;
+   text-decoration: none;
+   border-radius: 5px;  
+   text-align: center;
+   width: 80%;
+ }
+
+ .item-content a:hover {
+   background-color: #0056b3;
+ }
+
+</style>  
+<br><br><hr>
+<div class="item-content">
+ <a href="../CSS3 – Neumorphism Pagination Design.zip" download="CSS3 – Neumorphism Pagination Design.zip">Download source code</a>
+</div>

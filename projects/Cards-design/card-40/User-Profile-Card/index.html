@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Profle Card UI Design |  </title>
+  <!---Custom Css File!--->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="main">
+  <div class="profile-card">
+    <div class="image">
+      <img src="images/profile.jpg" alt="" class="profile-pic">
+    </div>
+    <div class="data">
+      <h2>Olivia Gomez</h2>
+      <span>Developer & Designer</span>
+    </div>
+    <div class="row">
+      <div class="info">
+        <h3>Following</h3>
+        <span>120</span>
+      </div>
+      <div class="info">
+        <h3>Followers</h3>
+        <span>5000</span>
+      </div>
+      <div class="info">
+        <h3>Posts</h3>
+        <span>209</span>
+      </div>
+    </div>
+    <div class="buttons">
+      <a href="#" class="btn">Message</a>
+      <a href="#" class="btn">Follow Me</a>
+    </div>
+  </div>
+</section>
+    
+</body>
+</html>
+
+
+
+  <!-- ============================================================== -->
+  <style>
+    .item-content{
+     margin-top: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     position: fixed;
+     bottom: 10px;
+     z-index: 1000;
+    }
+   .item-content a {
+     display: inline-block;
+     padding: 10px 15px;
+     color: white;
+     background-color: #1b3857;
+     text-decoration: none;
+     border-radius: 10px;
+     text-align: center;
+     width: 400px;
+     border: 1px solid rgb(211, 211, 228);
+   }
+   @media (max-width: 500px) {
+  .item-content a {
+    width: 90%;
+  }
+}
+   .item-content a:hover {
+     background-color: #08062b;
+     color: rgb(195, 195, 219);
+     border: 1px solid rgb(166, 166, 199);
+   }
+  </style>
+  
+  <div class="item-content">
+   <a href="../User-Profile-Card.zip" download="User-Profile-Card.zip">Download source code</a>
+  </div>

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Sliding Modal Box Style</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   <body>
+      <div class="start-btn">
+         <a href="#">View Modal</a>
+      </div>
+      <div class="center modal-box">
+         <div class="fas fa-times"></div>
+         <div class="fas fa-envelope icon1"></div>
+         <header>Don't miss updates from us!</header>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, suscipit, pers
+         </p>
+         <form action="">
+            <div class="fas fa-envelope icon2"></div>
+            <input type="email" required placeholder="abc@example.com">
+            <button>Subscribe</button>
+         </form>
+         <div class="icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+         </div>
+      </div>
+    
+      <script>
+         $(document).ready(function(){
+           $('.start-btn').click(function(){
+             $('.modal-box').toggleClass("show-modal");
+             $('.start-btn').toggleClass("show-modal");
+           });
+           $('.fa-times').click(function(){
+             $('.modal-box').toggleClass("show-modal");
+             $('.start-btn').toggleClass("show-modal");
+           });
+         });
+      </script>
+   </body>
+</html>
+
+
+
+  <!-- ============================================================== -->
+  <style>
+   .item-content{
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+ 
+   }
+  .item-content a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+  }
+ 
+  .item-content a:hover {
+    background-color: #0056b3;
+  }
+ 
+ </style>
+ <br><br><hr>
+ <div class="item-content">
+  <a href="../Popup-Subscription-Form-using.zip" download="Popup-Subscription-Form-using.zip">Download source code</a>
+ </div>

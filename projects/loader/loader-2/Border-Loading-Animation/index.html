@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Loading Animaton</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container active">
+      <span class="overlay" id="percent">0%</span>
+    </div>
+   
+    <script>
+      const container = document.querySelector(".container"),
+        percent = document.querySelector("#percent");
+
+      let perVal = 0;
+
+      let increament = setInterval(() => {
+        perVal++;
+        percent.textContent = `${perVal}%`;
+
+        if (perVal == 100) {
+          clearInterval(increament);
+          container.classList.remove("active");
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
+
+
+    
+
+
+  <!-- ============================================================== -->
+  <style>
+    .item-content{
+     margin-top: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     position: fixed;
+     bottom: 0;
+  
+    }
+   .item-content a {
+     display: inline-block;
+     padding: 10px 15px;
+     color: white;
+     background-color: #007bff;
+     text-decoration: none;
+     border-radius: 5px;
+     text-align: center;
+     width: 80%;
+   }
+  
+   .item-content a:hover {
+     background-color: #0056b3;
+   }
+  
+  </style>
+  <br><br><hr>
+  <div class="item-content">
+   <a href="../Border-Loading-Animation.zip" download="Border-Loading-Animation.zip">Download source code</a>
+  </div>
+ 

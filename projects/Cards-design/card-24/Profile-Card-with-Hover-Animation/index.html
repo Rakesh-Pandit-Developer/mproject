@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Profile Card Hover Animation | </title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="container">
+         <div class="wrapper">
+            <a href="#">
+            <img src="#" alt="">
+            </a>
+            <div class="title">
+               Andrew Neil
+            </div>
+            <div class="place">
+               Surkhet, Nepal
+            </div>
+         </div>
+         <div class="content">
+            <p>
+               User Interface Designer and <br>front-end developer
+            </p>
+            <div class="buttons">
+               <div class="btn">
+                  <button>Message</button>
+               </div>
+               <div class="btn">
+                  <button>Following</button>
+               </div>
+            </div>
+         </div>
+         <div class="icons">
+            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+         </div>
+      </div>
+    
+      <script>
+         const img = document.querySelector("img");
+         const icons = document.querySelector(".icons");
+         img.onclick = function(){
+           this.classList.toggle("active");
+           icons.classList.toggle("active");
+         }
+      </script>
+   </body>
+</html>
+
+
+
+  <!-- ============================================================== -->
+  <style>
+   .item-content{
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    z-index: 1000;
+   }
+  .item-content a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background-color: #1b3857;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    border: 1px solid rgb(211, 211, 228);
+  }
+  .item-content a:hover {
+    background-color: #08062b;
+    color: rgb(195, 195, 219);
+    border: 1px solid rgb(166, 166, 199);
+  }   
+   @media (max-width: 500px) {
+  .item-content a {
+    width: 90%;
+  }
+}
+ </style>
+ 
+ <div class="item-content">
+  <a href="../Profile-Card-with-Hover-Animation.zip" download="Profile-Card-with-Hover-Animation.zip">Download source code</a>
+ </div>

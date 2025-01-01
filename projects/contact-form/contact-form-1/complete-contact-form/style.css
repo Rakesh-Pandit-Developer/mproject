@@ -1,0 +1,91 @@
+    /* Form Container Styling */
+    .contact-form {
+        background-color: #e9ecef; /* Subtle grey background */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 50px auto;
+      }
+  
+      /* Form Header Styling */
+      .contact-form h2 {
+        text-align: center;
+        color: #333; /* Dark grey */
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+  
+      /* Input Field Styling */
+      .contact-form .form-control {
+        background-color: #ffffff; /* White background */
+        border: 1px solid #ccc; /* Light grey border */
+        padding: 10px;
+        border-radius: 5px;
+        color: #333; /* Dark grey text */
+        transition: all 0.3s ease; /* Smooth transition */
+      }
+  
+      .contact-form .form-control:focus {
+        background-color: #ffffff;
+        border-color: #555; /* Dark grey on focus */
+        box-shadow: 0 0 8px rgba(85, 85, 85, 0.2); /* Grey glow */
+        outline: none;
+      }
+  
+      /* Submit Button Styling */
+      .contact-form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #007086; /* Dark grey */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+  
+      .contact-form button:hover {
+        background-color: #1f4d4c; /* Slightly lighter grey */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+      }
+  
+      /* Textarea Resizing */
+      .contact-form textarea {
+        resize: none;
+      }
+  
+      /* Success/Error Message Styling */
+      #status {
+        margin-top: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+      #status.success {
+        color: #4CAF50; /* Green for success */
+      }
+      #status.error {
+        color: #FF5252; /* Red for error */
+      }
+  
+      #status {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 15px;
+      opacity: 0;
+      transition: opacity 0.5s ease, font-size 0.5s ease;
+    }
+  
+    #status.success {
+      color: #4CAF50; /* Green for success */
+    }
+  
+    #status.error {
+      color: #FF5252; /* Red for error */
+    }
+  
+    #status.visible {
+      opacity: 1;
+      font-size: 20px;
+    }

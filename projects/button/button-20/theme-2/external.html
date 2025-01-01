@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>External Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>External Page</h1>
+  </header>
+  <main>
+    <p>This is an external page loaded in an iframe. It synchronizes with the parent page's theme.</p>
+  </main>
+
+  <!-- Theme Synchronization Script -->
+  <script>
+    // Listen for theme updates from the parent page
+    window.addEventListener('message', (event) => {
+      if (event.data === 'dark') {
+        document.body.classList.add('dark-theme');
+      } else if (event.data === 'light') {
+        document.body.classList.remove('dark-theme');
+      }
+    });
+
+    // Apply the initial theme if parent sends it on load
+    window.parent.postMessage('request-theme', '*');
+  </script>
+  <script src="theme-with-iframe.js" defer></script>
+</body>
+</html>

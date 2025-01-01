@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Button with Loading Animation </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+                                
+        <!-- Fontawesome CDN Link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        
+    </head>
+    <body>
+        <div class="button">
+            <i class="fa-solid fa-circle-notch icon spinner"></i>
+            <span class="btn-text" user-selcect="none">Add to Cart</span>
+        </div>
+ 
+        <script>
+            let btn = document.querySelector(".button"),
+                spinIcon = document.querySelector(".spinner"),
+                btnText = document.querySelector(".btn-text");
+
+            btn.addEventListener("click", () => {
+                btn.style.cursor = "wait";
+                btn.classList.add("checked");
+                spinIcon.classList.add("spin");
+                btnText.textContent = "Loading";
+
+            setTimeout(() => {
+                btn.style.pointerEvents = "none";
+                spinIcon.classList.replace("spinner", "check");
+                spinIcon.classList.replace("fa-circle-notch", "fa-check");
+                btnText.textContent = "Done";
+
+            }, 4500) //1s = 1000ms
+            });
+        </script>
+    </body>
+</html>
+
+
+  <!-- ============================================================== -->
+  <style>
+    .item-content{
+     margin-top: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     position: fixed;
+     bottom: 10px;
+    }
+   .item-content a {
+     display: inline-block;
+     padding: 10px 15px;
+     color: white;
+     background-color: #1b3857;
+     text-decoration: none;
+     border-radius: 10px;
+     text-align: center;
+     width: 400px;
+     border: 1px solid rgb(211, 211, 228);
+   }
+   .item-content a:hover {
+     background-color: #08062b;
+     color: rgb(195, 195, 219);
+     border: 1px solid rgb(166, 166, 199);
+   }   
+   @media (max-width: 500px) {
+  .item-content a {
+    width: 90%;
+  }
+}
+  </style>
+  
+  <div class="item-content">
+   <a href="../Button-Animation.zip" download="Button-Animation.zip">Download source code</a>
+  </div>
